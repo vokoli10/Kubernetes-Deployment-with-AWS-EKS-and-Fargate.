@@ -19,9 +19,15 @@ Anything besides this, we will have to troubleshoot. Use the following command t
 ```bash
 kubectl get deploy -n kube-system
 ```
-Ensure you can see at least 2 pods are running in the aws-load-balancer-controller we just created. This simply means the aws-load-balancer-controller has acted upon the ingress services we had deployed earlier and can now be accessable by external users.
+Ensure you can see at least 2 pods are running in the aws-load-balancer-controller we just created. This simply means the aws-load-balancer-controller has acted upon the ingress services we had deployed earlier and can now be accessable by external users. Here is a screeenshot of mine:
+
+![Image](https://i.imgur.com/tvp1xjd.png)
+
 
 We can also verify through the GUI (AWS Console) whether the load balancer has been created by the aws-load-balancer-controller. If so, the Ingress services has an address and can now be reached externally.
+
+![Image](https://i.imgur.com/KKAEPOu.png)
+
 
 To verify this, we can copy the address on the ingress unto our browser.
 
