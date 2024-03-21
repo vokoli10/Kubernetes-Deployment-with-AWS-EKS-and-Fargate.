@@ -19,19 +19,17 @@ Anything besides this, we will have to troubleshoot. Use the following command t
 ```bash
 kubectl get deploy -n kube-system
 ```
-As you can see below, at least 2 pods are running in the aws-load-balancer-controller we just created.
-![Image Description](https://imgur.com/KKAEPOu)   ![Image Description](https://imgur.com/KKAEPOu)
+Ensure you can see at least 2 pods are running in the aws-load-balancer-controller we just created. This simply means the aws-load-balancer-controller has acted upon the ingress services we had deployed earlier and can now be accessable by external users.
 
-![Image](https://imgur.com/tvp1xjd)
+We can also verify through the GUI (AWS Console) whether the load balancer has been created by the aws-load-balancer-controller. If so, the Ingress services has an address and can now be reached externally.
 
-
-
-We can now verify through the GUI (AWS Console) whether the load balancer has been built by the aws-load-balancer-controller. 
-The load balancer has been created, as can be seen below.
-
-
-
-
+To verify this, we can copy the address on the ingress unto our browser.
 
 
 ![Ingress](https://i.imgur.com/y1I4AG4.png)
+
+Yay! Users are able to access our application externally now that it is deployed.
+
+Thank you for joining us on this journey to explore the power of AWS EKS with Fargate. We hope this guide has provided valuable insights and practical knowledge to help you succeed in your cloud-native endeavors.
+
+PS: Remember to remove the cluster you made, or else you can continue to accrue charges. This is very important.
